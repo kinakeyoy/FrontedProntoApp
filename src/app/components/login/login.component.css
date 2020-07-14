@@ -1,0 +1,20 @@
+.text-center {
+    justify-content: center;
+    display: flex;
+}
+
+.margin-top {
+    margin-top: 2em;
+    justify-content: center;
+    display: flex;
+}
+
+.img-g {
+    width: 30px;
+    height: 30px;
+}
+
+.img-f {
+    width: 35px;
+    height: 35px;
+}

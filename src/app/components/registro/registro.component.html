@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+</head>
+
+<body background="assets/imgs/fondo.jpg">
+    <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="box">
+            <mat-card-header>
+                <mat-card-title>Registro De Usuarios</mat-card-title>
+            </mat-card-header>
+
+            <form class="example-form">
+
+                <mat-card-content>
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Username" required>
+                        <i class="material-icons iconis prefix">account_box</i>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Email" type="email" required>
+                        <i class="material-icons iconis prefix">local_post_office</i>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <input matInput placeholder="Password" type="Password" required>
+                        <i class="material-icons iconis prefix">lock</i>
+                    </mat-form-field>
+
+                </mat-card-content>
+
+                <button mat-stroked-button color="accent" class="btn-block">
+                    <i class="material-icons iconis prefix">add_circle_outline</i>
+                    REGISTRAR
+                </button>
+
+
+            </form>
+        </mat-card>
+    </div>
+</body>
+
+</html>
