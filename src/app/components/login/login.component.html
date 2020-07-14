@@ -23,8 +23,10 @@
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
-                        <input matInput type="password" placeholder="Password" required>
+                        <input id="password" matInput type="password" placeholder="Password" required>
                         <i class="material-icons iconis prefix">lock</i>
+                        <i *ngIf="!ver_pass" style="float: right;" class="material-icons iconis prefix" (click)="mostrarContrasena()">remove_red_eye</i>
+                        <i *ngIf="ver_pass" style="float: right;" class="material-icons iconis prefix" (click)="mostrarContrasena()">visibility_off</i>
                     </mat-form-field>
                 </mat-card-content>
                 <button mat-stroked-button color="accent" class="btn-block">
@@ -42,7 +44,7 @@
                     </button>
 
                 <button mat-icon-button color="accent">
-                       <img class="img-g" src="assets/imgs/icon-google.png">
+                       <img class="img-g" src="assets/imgs/icon-google.png" (click)="authGloogle()">
                     </button>
             </div>
         </mat-card>
