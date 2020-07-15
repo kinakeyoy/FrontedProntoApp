@@ -13,6 +13,10 @@ body {
     display: flex; */
 }
 
+.mat-card-header .mat-card-title {
+    margin-bottom: 2em !important;
+}
+
 .img {
     justify-content: center;
     align-items: center;

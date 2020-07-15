@@ -8,6 +8,7 @@ import { LoginService } from '../../services/login.service';
 })
 export class LoginComponent implements OnInit {
 
+  hide = true;
   ver_pass: boolean = false;
 
   constructor(
@@ -26,15 +27,15 @@ export class LoginComponent implements OnInit {
   }
 
 
-  mostrarContrasena(){
-    let tipo: any = document.getElementById('password');
-    if(tipo.type == 'password'){
-        tipo.type = 'text';
-        this.ver_pass = true;
-    }else{
-        tipo.type = 'password';
-        this.ver_pass = false;
-    }
-  }
+  // mostrarContrasena(){
+  //   let tipo: any = document.getElementById('password');
+  //   if(tipo.type == 'password'){
+  //       tipo.type = 'text';
+  //       this.ver_pass = true;
+  //   }else{
+  //       tipo.type = 'password';
+  //       this.ver_pass = false;
+  //   }
+  // }
 
 }
