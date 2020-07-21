@@ -13,22 +13,22 @@
                 <mat-card-title>Registro De Usuarios</mat-card-title>
             </mat-card-header>
 
-            <form class="example-form">
+            <form class="example-form" [formGroup]="addressForm" novalidate #f="ngForm">
 
                 <mat-card-content>
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Nombre De Usuario" required>
+                        <input matInput [(ngModel)]="user.displayName" formControlName="displayName" placeholder="Nombre De Usuario" autocomplete="off">
                         <!-- <i class="material-icons iconis prefix">account_box</i> -->
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
-                        <input matInput placeholder="Email" type="email" required>
+                        <input matInput [(ngModel)]="user.email" formControlName="email" placeholder="Email" autocomplete="off">
                         <!-- <i class="material-icons iconis prefix">local_post_office</i> -->
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
                         <!-- <i class="material-icons iconis prefix">lock</i> -->
-                        <input matInput type="password" placeholder="Contraseña" required [type]="hide ? 'password' : 'text'">
+                        <input matInput [(ngModel)]="user.password" formControlName="password" type="password" placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
                         <button style="font-size : 20px;" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                         </button>
@@ -36,7 +36,7 @@
 
                 </mat-card-content>
 
-                <button mat-stroked-button color="accent" class="btn-block">
+                <button mat-stroked-button color="accent" class="btn-block" [disabled]="f.invalid" (click)="registro()">
                     <i class="material-icons iconis prefix">add_circle_outline</i>
                     REGISTRAR
                 </button>
