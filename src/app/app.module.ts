@@ -19,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ComponentsModule } from './components/components.module';
+import { AuthGuard } from './guards/guards.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,7 @@ import { ComponentsModule } from './components/components.module';
     MatButtonModule,
     LayoutModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

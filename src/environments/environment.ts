@@ -5,13 +5,14 @@
 export const environment = {
 
   firebaseConfig : {
-    apiKey: 'AIzaSyBqFZ0dpcrod18pktZPeaW5udbkUxFeHcE',
-    authDomain: 'angularpwa-2563c.firebaseapp.com',
-    databaseURL: 'https://angularpwa-2563c.firebaseio.com',
-    projectId: 'angularpwa-2563c',
-    storageBucket: 'angularpwa-2563c.appspot.com',
-    messagingSenderId: '626720849526',
-    appId: '1:626720849526:web:4304d4e17b370cba93e957'
+    apiKey: 'AIzaSyBtQtzo4pZwMeNQ_TBiB8gkUKHjQNcM5sg',
+    authDomain: 'prontoapp-b6dc0.firebaseapp.com',
+    databaseURL: 'https://prontoapp-b6dc0.firebaseio.com',
+    projectId: 'prontoapp-b6dc0',
+    storageBucket: 'prontoapp-b6dc0.appspot.com',
+    messagingSenderId: '987589449643',
+    appId: '1:987589449643:web:5cb106dd2bd47072d364ee',
+    measurementId: 'G-YW2QJPFDGQ'
   },
   production: false
 };

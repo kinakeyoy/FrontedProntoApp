@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
-import * as auth from 'firebase/auth';
 import * as firebase from 'firebase/app';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -9,13 +9,15 @@ import * as firebase from 'firebase/app';
 })
 export class LoginService {
 
-  constructor(public afAuth: AngularFireAuth) { }
+  constructor(public afAuth: AngularFireAuth, private ruta: Router) { }
 
 
   async loginGoogle(){
 
     try{
-      return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+      return this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(() => {
+        this.ruta.navigate(['/home']);
+      });
     }catch(err){
       return  console.log(err);
     }
